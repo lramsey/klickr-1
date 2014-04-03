@@ -30,6 +30,9 @@ app.get('/logout', handler.logoutUser);
 app.get('/signup', handler.signupUserForm);
 app.post('/signup', handler.signupUser);
 
+// Klickr specific
+app.post('/keystrokes', handler.handleKeystrokes);
+
 // NOT NEEDED
 // app.get('/*', handler.navToLink);
 
