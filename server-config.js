@@ -33,7 +33,7 @@ app.post('/signup', handler.signupUser);
 
 // Klickr specific
 app.post('/keystrokes', handler.handlePostKeystrokes);
-app.get('/keystrokes/:id,', handler.handleGetKeystrokes);
+app.get('/keystrokes/:id', handler.handleGetKeystrokes);
 
 // NOT NEEDED
 // app.get('/*', handler.navToLink);
