@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
-var keystrokeSchema = new mongoose.Schema({
-  keystroke: [{
+var klicksSchema = new mongoose.Schema({
+  klicks: [{
     a: String,
     x: Number,
     y: Number,
@@ -13,4 +13,4 @@ var keystrokeSchema = new mongoose.Schema({
 
 // };
 
-module.exports = mongoose.model('Keystroke', keystrokeSchema);
+module.exports = mongoose.model('Klicks', klicksSchema);

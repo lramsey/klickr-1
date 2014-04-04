@@ -32,8 +32,8 @@ app.get('/signup', handler.signupUserForm);
 app.post('/signup', handler.signupUser);
 
 // Klickr specific
-app.post('/keystrokes', handler.handlePostKeystrokes);
-app.get('/keystrokes/:id', handler.handleGetKeystrokes);
+app.post('/klicks', handler.handlePostKlicks);
+app.get('/klicks/:id', handler.handleGetKlicks);
 
 // NOT NEEDED
 // app.get('/*', handler.navToLink);
