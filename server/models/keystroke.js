@@ -1,9 +1,12 @@
 var mongoose = require('mongoose');
 
 var keystrokeSchema = new mongoose.Schema({
-  // user id?
-  character: String,
-  count: Number
+  keystroke: [{
+    a: String,
+    x: Number,
+    y: Number,
+    t: Date
+  }]
 });
 
 // keystrokeSchema.methods.initialize = function () {

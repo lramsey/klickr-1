@@ -2,10 +2,11 @@ module.exports = app;
 
 var express = require('express');
 var util = require('./lib/utility');
-
+var cors = require('cors');
 var handler = require('./lib/request-handler');
 
 var app = express();
+app.use(cors());
 
 app.configure(function() {
   app.set('views', __dirname + '/views');
@@ -31,7 +32,8 @@ app.get('/signup', handler.signupUserForm);
 app.post('/signup', handler.signupUser);
 
 // Klickr specific
-app.post('/keystrokes', handler.handleKeystrokes);
+app.post('/keystrokes', handler.handlePostKeystrokes);
+app.get('/keystrokes/:id,', handler.handleGetKeystrokes);
 
 // NOT NEEDED
 // app.get('/*', handler.navToLink);
