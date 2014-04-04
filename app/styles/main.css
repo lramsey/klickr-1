@@ -63,9 +63,6 @@ body {
   position : absolute;
   top: 100px;
   left: 100px;
-  -webkit-transform: translate(400px,0px);
-  -webkit-transition: all 5s ease-in-out;
-  /*-webkit-transition: top 5s, left 5s;*/
 }
 
 /* Responsive: Portrait tablets and up */
