@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app='klickr'>
+<head>
+  <meta charset='utf-8'>
+  <title>Klickr.io</title>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js'></script>
+  <script src='http://code.angularjs.org/1.2.15/angular-route.min.js'></script>
+  <script src='scripts/app.js'></script>
+  <script src='scripts/navigationCtrl.js'></script>
+  <script src='scripts/homeCtrl.js'></script>
+  <link rel='stylesheet' href='styles/style.css'>
+</head>
+<body>
+<nav ng-controller='NavigationCtrl'>
+  <ul>
+    <li><img src='images/home.svg' alt='Home'><a href='/'>Home</a></li>
+    <li><img src='images/about.svg' alt="About"><a href="/about">About</a></li>
+    <li><img src='images/contact.svg' alt="Contact"><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div ng-view style="margin-left:200px"></div>
+
+</body>
+</html>
