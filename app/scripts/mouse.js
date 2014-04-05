@@ -1,17 +1,17 @@
 // moves mouse to given destination with duration
-var move = function (end_x, end_y, duration){
-  d3.selectAll(".mouse")
+var move = function (endX, endY, duration){
+  d3.selectAll('.mouse')
   .transition()
   .duration(duration)
-  .style({'top':  end_y + 'px', 'left': end_x + 'px'});
+  .style({'top':  endY + 'px', 'left': endX + 'px'});
 };
 
 
 // chains mouse moves together
-var processData = function(arr, index, x_scale, y_scale){
+var processData = function(arr, index, xScale, yScale){
   index = index || 0;
-  x_scale = x_scale || 1;
-  y_scale = y_scale || 1;
+  xScale = xScale || 1;
+  yScale = yScale || 1;
   if ( index === arr.length ) {
     return;
   } else {
@@ -438,9 +438,18 @@ var test=
   ]
 };
 
-
-
 $(function(){
+
+var playRecording = function(){
+  var xScale = window.width / test["width"];
+  var yScale = window.height / test["height"];
+  var movement = test["ticks"];
+  movement[0].t = 0;
+  for (var i = 1; i < movement.length-1; i++){
+    movement[i].t = movement[i]["timestamp"] - movement[i-1]["timestamp"];
+  }
+  processData(movement, 0, xScale, yScale);
+}
 
 //on 'click trigger' *** need to be integrated into overall platform event ****
   $('#mybutton').on('click', function (){
@@ -457,16 +466,9 @@ $(function(){
     //   });
 
 
-// generate move chain 
-// ***** needs to go into ajax callback 
+// generate move chain
+// ***** needs to go into ajax callback
 // ***** need to review scaling approach ****
-    var x_scale = window.width / test["width"];
-    var y_scale = window.height / test["height"];
-    var movement = test["ticks"];
-    movement[0].t = 0;
-    for (var i = 1; i < movement.length-1; i++){
-      movement[i].t = movement[i]["timestamp"] - movement[i-1]["timestamp"];
-    }
-    processData(movement, 0, x_scale, y_scale);
+
   });
 });
