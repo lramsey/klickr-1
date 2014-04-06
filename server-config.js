@@ -7,8 +7,6 @@ var app = express();
 app.configure(function() {
   app.use(express.bodyParser());
   app.use(express.static(__dirname + '/app'));
-  app.use(express.cookieParser('awesomebullets'));
-  app.use(express.session());
   app.use(cors());
 });
 
