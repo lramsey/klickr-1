@@ -12,7 +12,7 @@ var klicksSchema = new mongoose.Schema({
     pageY: Number,
     clientX: Number,  // x coordinate relative to the viewport
     clientY: Number,
-    timestamp: Date,
+    timestamp: Number,
     target: { type: String, default: '' }, // need a default value to be blank
     charCode: { type: Number, default: -1 }, // applies only for keypress actions
     altKey: { type: Boolean, default: false }, // applies only for keypress actions
