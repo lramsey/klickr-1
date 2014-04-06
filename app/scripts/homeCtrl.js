@@ -1,4 +1,4 @@
-angular.module('klickr')
+angular.module('Klickr')
   .controller('HomeCtrl', ['$scope', '$http', function ($scope, $http) {
     var server = 'http://jyek.cloudapp.net:3004/klicks';
     $scope.links = [];
