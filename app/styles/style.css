@@ -73,9 +73,12 @@ body{
 .top-header {
 	padding: 3em 0;
 }
+.top-nav-wrap{
+	background: url(../images/header-bg.jpg);
+}
 .header{
 	background: url(../images/header-bg.jpg);
-	min-height: 650px;
+	min-height: 500px;
 }
 .top-nav{
 	float:right;
@@ -137,6 +140,10 @@ body{
 	padding: 7em 0;
 }
 /*---start-gallery-----*/
+.gallery-wrap {
+	background: url(../images/portfolio-bg.jpg) no-repeat;
+	padding: 4em 0;
+}
 .recent-works {
 	background: url(../images/portfolio-bg.jpg) no-repeat;
 	padding: 4em 0;
@@ -1124,11 +1131,11 @@ body{
 		background: url(../images/meet-bg.jpg);
 		padding: 2em 0;
 	}
-	.contatct-form {
+	.contact-form {
 		width:100%;
 		margin: 2em auto;
 	}
-	.contatct-form input[type="submit"] {
+	.contact-form input[type="submit"] {
 		width: 40%;
 		padding: 0.78em 1.1em;
 		font-size:1.2em;

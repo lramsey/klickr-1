@@ -2,64 +2,50 @@
 <!---start-header-->
 <div class="header" id="home">
   <div class="wrap">
-  <div class="top-header">
-    <div class="logo">
-      <a href="index.html"><span> </span>Klickr.io</a>
+    <!--start-content-slider-->
+    <div id="da-slider" class="da-slider">
+      <div id="intro" class="da-slide">
+        <div class="da-title">
+          <h3>Make and share<br/>web tutorials</h3>
+        </div>
+        <div class="da-img">
+          <img src="/images/slider-pic1.png" alt="Drupal Powered" title="Presenting the Drupalien" />
+        </div>
+      </div>
+      <div id="user-experience" class="da-slide">
+       <div class="da-title">
+       <h3> the template<br />
+             is a awesome!</h3>
+        </div>
+         <div class="da-img">
+          <img src="/images/slider-pic2.png" alt="Drupal Powered" title="Presenting the Drupalien" />
+        </div>
+      </div>
+      <div id="design" class="da-slide">
+       <div class="da-title">
+        <h3> the template<br />
+             is a awesome!</h3>
+        </div>
+         <div class="da-img">
+          <img src="/images/slider-pic3.png" alt="Drupal Powered" title="Presenting the Drupalien" />
+        </div>
+      </div>
+      <div>
+      </div>
     </div>
-    <div class="top-nav">
-      <ul>
-        <li class="active"><a href="#gallery" class="scroll">Gallery</a></li>
-        <li><a href="#services" class="scroll">Download</a></li>
-        <div class="clear"> </div>
-      </ul>
-    </div>
-    <div class="clear"> </div>
-  </div>
-<!--End-header-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/js/jquery.cslider.js"></script>
+    <script>
+    //jQuery(document).ready(function() {
+    $('#da-slider').cslider({
+      autoplay : true,
+      interval: 3000,
+      bgincrement : 10
+    });
+    //});
+    </script>
 <!--start-content-slider-->
-<div id="da-slider" class="da-slider">
-  <div id="intro" class="da-slide">
-    <div class="da-title">
-      <h3>Make and share<br/>web tutorials</h3>
-    </div>
-    <div class="da-img">
-      <img src="/images/slider-pic1.png" alt="Drupal Powered" title="Presenting the Drupalien" />
-    </div>
   </div>
-  <div id="user-experience" class="da-slide">
-   <div class="da-title">
-   <h3> the template<br />
-         is a awesome!</h3>
-    </div>
-     <div class="da-img">
-      <img src="/images/slider-pic2.png" alt="Drupal Powered" title="Presenting the Drupalien" />
-    </div>
-  </div>
-  <div id="design" class="da-slide">
-   <div class="da-title">
-    <h3> the template<br />
-         is a awesome!</h3>
-    </div>
-     <div class="da-img">
-      <img src="/images/slider-pic3.png" alt="Drupal Powered" title="Presenting the Drupalien" />
-    </div>
-  </div>
-  <div>
-  </div>
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="/js/jquery.cslider.js"></script>
-<script>
-//jQuery(document).ready(function() {
-$('#da-slider').cslider({
-  autoplay : true,
-  interval: 3000,
-  bgincrement : 10
-});
-//});
-</script>
-<!--start-content-slider-->
-</div>
 </div>
 <!--End-header-->
 <!--start-content-->
@@ -69,18 +55,18 @@ $('#da-slider').cslider({
   <div class="top-service-grids" id="services">
     <div class="top-service-grid">
       <a href="#"><img src="/images/top-grid-pic1.png" alt="" /></a>
-      <a href="#"><span>Flat Design</span></a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporUt enim ad minim veniam</p>
+      <a href="#"><span>Make</span></a>
+      <p>Make awesome tutorials that play natively on your browser.</p>
     </div>
     <div class="top-service-grid">
       <a href="#"><img src="/images/top-grid-pic2.png" alt="" /></a>
-      <a href="#"><span>Great Ideas</span></a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporUt enim ad minim veniam</p>
+      <a href="#"><span>Share</span></a>
+      <p>Share them with family and friends.</p>
     </div>
     <div class="top-service-grid">
       <a href="#"><img src="/images/top-grid-pic4.png" alt="" /></a>
-      <a href="#"><span>Browser Compatibility</span></a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporUt enim ad minim veniam</p>
+      <a href="#"><span>Learn</span></a>
+      <p>If you dislike following a long list of instructions, you'll love us.</p>
     </div>
     <div class="clear"> </div>
   </div>
@@ -279,8 +265,8 @@ $('#da-slider').cslider({
           <span> </span>
         </div>
         <div class="blog-grid-right">
-          <h3><a href="#">Layered Neatly Photoshop Template</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. Integer lobortis purus a felis adipiscing, eget ornare justo semper. Etiam commodo tincidunt ante.</p>
+          <h3><a href="#">How to Make a Klick</a></h3>
+          <p>It's easy! Install our Chrome extension, record your steps in your Chrome browser, annotate them and save. We'll give you a link to share your recording with your friends.</p>
           <a class="blogbtng popup-with-zoom-anim" href="#small-dialog1">Show More</a>
         </div>
         <div class="clear"> </div>
@@ -288,7 +274,7 @@ $('#da-slider').cslider({
       <!---->
       <div class="blog-grid2">
         <div class="blog-grid2-left">
-          <h3><a href="#">Layered Neatly Photoshop Template</a></h3>
+          <h3><a href="#">How to View a Klick</a></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. Integer lobortis purus a felis adipiscing, eget ornare justo semper. Etiam commodo tincidunt ante.</p>
           <a class="blogbtnb popup-with-zoom-anim" href="#small-dialog1">Show More</a>
         </div>

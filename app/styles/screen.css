@@ -14,7 +14,8 @@
   min-width: 520px;
   height: 441px;
   position: relative;
-  margin: 30px auto;
+  margin: 0 auto 30px;
+  padding-top: 30px;
   overflow: hidden;
   background: transparent url(../images/waves.png) repeat 0% 0;
   -webkit-transition: background-position 1.4s ease-in-out;
@@ -43,7 +44,7 @@
     z-index: 10;
     font-size:4em;
     text-transform: uppercase;
-    
+
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); }
   .da-slide .da-text {
     width: 40%;
