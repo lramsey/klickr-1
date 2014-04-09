@@ -6,9 +6,9 @@
       <p>Browse our collection of web tutorials</p>
     </div>
     <div class="gallery">
-      <ul ng-controller='HomeCtrl'>
-        <div class="klick" ng-repeat='link in links'>
-          <a href='{{ link.linkUrl }}'> {{ link.url }} </a>
+      <ul>
+        <div class="klick" ng-repeat='klick in klicks'>
+          <a href='{{ klick.linkUrl }}'> {{ klick.description }} ({{ klick.url }}) </a>
         </div>
       </ul>
     </div>
