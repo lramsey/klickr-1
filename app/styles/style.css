@@ -65,7 +65,7 @@ body{
 }
 
 /* --------------------------------------------------------------------------------- */
-/* Content
+/* Content (Gallery)
 /* --------------------------------------------------------------------------------- */
 
 .content-head {
@@ -88,6 +88,27 @@ body{
 
 .content-body {
 	padding-bottom: 4em;
+}
+
+.search {
+	padding-bottom: 1em;
+}
+
+input[type="text"] {
+  background: #FFF;
+  padding: 0.8em 0.8em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  width: 300px;
+  border: 1px solid #ccc;
+  outline: none;
+  color: #A3A3A3;
+  font-family: 'open_sansregular';
+  margin-left: 1em;
+  margin-bottom: 1em;
 }
 
 /* --------------------------------------------------------------------------------- */
