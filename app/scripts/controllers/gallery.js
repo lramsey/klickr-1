@@ -3,19 +3,20 @@
 angular.module('klickrApp')
   .controller('GalleryCtrl', function ($scope, KlickService) {
 
+    // Initialize params
     $scope.spinner = false;
     $scope.kOrder = '-createdAt';
 
-    /* TODO: Sort toggle */
-    $scope.sortToggle = function(param){
-      if (param && param[0] === '-'){
-        return param.substring(1);
+    // Sort toggle by field (ascending and descending)
+    $scope.sort = function(field){
+      if ($scope.kOrder === field) {
+        $scope.kOrder = '-' + field;
       } else {
-        return '-' + param;
+        $scope.kOrder = field;
       }
     };
 
-    /* Pulls klicks from server  */
+    // Pulls klicks from server
     $scope.refresh = function(){
       $scope.spinner = true;
       return KlickService.getKlicks().then(function(klicks){

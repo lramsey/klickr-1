@@ -10,11 +10,11 @@
       <div ng-show="spinner" class="txt-center"><i class="fa fa-3x fa-compass fa-spin" style="color: #515151"></i></div>
       <table ng-hide="spinner">
         <tr>
-          <th>Description<i ng-click="kOrder='description'" class="sort fa fa-sort"></i></th>
-          <th>Site<i ng-click="kOrder='url'" class="sort fa fa-sort"></i></th>
-          <th>Date<i ng-click="kOrder='-createdAt'" class="sort fa fa-sort"></i></th>
-          <th>Hype<i ng-click="kOrder='hype'" class="sort fa fa-sort"></i></th>
-          <th>Views<i ng-click="kOrder='views'" class="sort fa fa-sort"></i></th>
+          <th>Description<i ng-click="sort('description')" class="sort fa fa-sort"></i></th>
+          <th>Site<i ng-click="sort('url')" class="sort fa fa-sort"></i></th>
+          <th>Date<i ng-click="sort('createdAt')" class="sort fa fa-sort"></i></th>
+          <th>Hype<i ng-click="sort('hype')" class="sort fa fa-sort"></i></th>
+          <th>Views<i ng-click="sort('views')" class="sort fa fa-sort"></i></th>
         </tr>
         <tr class="klick" ng-repeat="klick in klicks | filter:kFilter | orderBy:kOrder:false" ng-class-odd="'odd'">
           <td class="td-desc"><a href="{{ klick.linkUrl }}" target="_blank"> {{ klick.description }} </a></td>
