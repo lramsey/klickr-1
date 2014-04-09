@@ -49,46 +49,106 @@ body{
 }
 
 /* --------------------------------------------------------------------------------- */
-/* Nav Backgrounds
+/* Nav
 /* --------------------------------------------------------------------------------- */
 
-.landing-bg { background: url(../images/header-bg.jpg ); }
-.gallery-bg { background: url(../images/portfolio-bg.jpg); }
+.top-nav-wrap {
+	background: url(../images/header-bg.jpg);
+}
+
+.top-header {
+	padding: 3em 0;
+}
+
+.top-header-small {
+	padding: 0.8em 0;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Content
+/* --------------------------------------------------------------------------------- */
+
+.content-head {
+	padding: 3em 0;
+	text-align:center;
+}
+
+.content-head h3 {
+	color: #3A494C;
+	font-size: 4.5em;
+	font-family: 'trump_town_proregular';
+	text-transform: uppercase;
+}
+.content-head p {
+	color: #3A494C;
+	line-height: 1.5em;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.content-body {
+	padding-bottom: 4em;
+}
 
 /* --------------------------------------------------------------------------------- */
 /* Tables
 /* --------------------------------------------------------------------------------- */
 
 table {
-	font-size: 1.4em;
+	font-size: 1.1em;
 	color: #515151;
 	width: 100%;
 }
 
 th {
 	text-align: left;
-	padding: 10px 0;
-	border-bottom: 1px solid #515151;
+	font-size: 0.9em;
+	padding: 11px 0 15px 3px;
+	color: rgb(150,150,150);
+	border-top: 1px solid #ccc;
+}
+
+tr.odd {
+	background: rgb(203,240,246);
+}
+
+td a {
+	text-decoration: none;
+	color: #515151;
 }
 
 td {
-	padding: 10px 0;
+	padding: 12px 0 12px 3px;
+	color: rgb(150,150,150);
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  /* IE 6+, FF 7+, Op 11+, Saf 1.3+, Chr 1+ */
+  -o-text-overflow: ellipsis;  /* for Opera 9 & 10 */
+}
+
+td:first-child, th:first-child {
+	padding-left: 5px;
 }
 
 .td-desc {
-	width: 60%;
+	min-width: 200px;
+}
+
+.td-site {
+	min-width: 150px;
+	max-width: 300px;
 }
 
 .td-date {
-	width: 20%;
+	width: 100px;
 }
 
 .td-hype {
-	width: 10%;
+	width: 65px;
 }
 
 .td-views {
-	width: 10%;
+	width: 65px;
 }
 
 /* --------------------------------------------------------------------------------- */
@@ -121,9 +181,7 @@ td {
 	font-size: 3em;
 	text-transform: uppercase;
 }
-.top-header {
-	padding: 3em 0;
-}
+
 .header{
 	background: url(../images/header-bg.jpg);
 	min-height: 500px;

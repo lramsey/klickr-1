@@ -7,14 +7,13 @@ angular.module('klickrApp')
       return route === $location.path();
     };
 
-    $scope.bg = function() {
-      var bg = {
-        '/': 'landing-bg',
-        '/gallery': 'gallery-bg'
+    $scope.formatHeader = function() {
+      var formatHeader = {
+        '/': 'top-header',
+        '/gallery': 'top-header-small'
       };
 
-      console.log('BG', bg[$location.path()] || bg['/']);
-      return bg[$location.path()] || bg['/'];
+      return formatHeader[$location.path()] || formatHeader['/gallery'];
     };
 
   });
