@@ -15,12 +15,13 @@
           <th>Views</th>
         </tr>
         <tr class="klick" ng-repeat='klick in klicks'>
-          <td><a href='{{ klick.linkUrl }}'> {{ klick.description }} ({{ klick.url }})</a></td>
-          <td>{{ klick.createdAt }}</td>
-          <td>{{ klick.likes }}</td>
-          <td></td>
+          <td class="td-desc"><a href='{{ klick.linkUrl }}'> {{ klick.description }} </a></td>
+          <td class="td-date">{{ klick.createdAt | date:'M/d/yyyy' }}</td>
+          <td class="td-hype txt-center">{{ klick.hype }}</td>
+          <td class="td-views txt-center">{{ klick.views }}</td>
         </tr>
       </table>
+      <div class="clear"></div>
     </div>
   </div>
 </div>
