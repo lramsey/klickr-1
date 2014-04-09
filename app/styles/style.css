@@ -129,6 +129,11 @@ th {
 	border-top: 1px solid #ccc;
 }
 
+th .sort {
+	cursor: pointer;
+	padding-left: 3px;
+}
+
 tr.odd {
 	background: rgb(203,240,246);
 }
