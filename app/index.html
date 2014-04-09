@@ -23,7 +23,7 @@
   <!-- endbuild -->
 </head>
 <body ng-app="klickrApp">
-  <div class="top-nav-wrap">
+  <div ng-class="bg()" ng-controller="NavCtrl">
     <div class="wrap">
       <div class="top-header">
         <div class="logo">
@@ -31,8 +31,8 @@
         </div>
         <div class="top-nav">
           <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li ng-class="{active:isActive('/')}"><a href="#">Home</a></li>
+            <li ng-class="{active:isActive('/gallery')}"><a href="#gallery">Gallery</a></li>
             <li><a href="#">Download</a></li>
             <div class="clear"></div>
           </ul>
@@ -46,8 +46,50 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
+  <!-- Start View -->
   <div ng-view></div>
+  <!-- End View -->
+
+  <!-- Start Footer -->
+  <div class="footer">
+  <div class="wrap">
+    <div class="footer-grids">
+      <div class="footer-left">
+        <ul>
+          <li><a class="ftwiter" href="#"> </a></li>
+          <li><a class="fface" href="#"> </a></li>
+          <div class="clear"> </div>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <p>
+          &copy; 2014 Klickr. Made by: <a href="http://www.penguinhustle.com/blog">Justin</a>, <a href="https://github.com/lramsey">Luke</a>, <a href="https://github.com/stephandacosta">Stephan</a>, <a href="https://medium.com/@fay_jai">Willson</a></a>
+        </p>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+      </script>
+      <!--move-top-path-->
+      <script type="text/javascript" src="/js/move-top.js"></script>
+      <script type="text/javascript" src="/js/easing.js"></script>
+      <script type="text/javascript">
+        jQuery(document).ready(function($) {
+          $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+          });
+        });
+      </script>
+      <!--move-top-path-->
+      <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+
+      </div>
+      <div class="clear"> </div>
+    </div>
+  </div>
+  </div>
+  <!-- End Footer -->
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
@@ -80,6 +122,7 @@
   <script src="scripts/app.js"></script>
   <script src="scripts/services/klick_service.js"></script>
   <script src="scripts/controllers/gallery.js"></script>
+  <script src="scripts/controllers/nav.js"></script>
   <!-- endbuild -->
 </body>
 </html>

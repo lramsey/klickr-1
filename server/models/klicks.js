@@ -6,6 +6,9 @@ var klicksSchema = new mongoose.Schema({
   width: Number,  // width of the window where the recording happens
   height: Number,  // height of the window where the recording happens
   description: { type: String, default: '' },
+  createdAt: { type: Date, default: Date.now },
+  hype: { type: Number, default: 0 },
+  views: { type: Number, default: 0 },
   ticks: [{
     action: String,
     pageX: Number,  // x coordinate relative to the entire page

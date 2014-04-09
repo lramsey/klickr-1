@@ -6,11 +6,21 @@
       <p>Browse our collection of web tutorials</p>
     </div>
     <div class="gallery">
-      <ul>
-        <div class="klick" ng-repeat='klick in klicks'>
-          <a href='{{ klick.linkUrl }}'> {{ klick.description }} ({{ klick.url }}) </a>
-        </div>
-      </ul>
+      <div ng-show="spinner" class="txt-center"><i class="fa fa-3x fa-compass fa-spin" style="color: white"></i></div>
+      <table ng-hide="spinner">
+        <tr>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Hype</th>
+          <th>Views</th>
+        </tr>
+        <tr class="klick" ng-repeat='klick in klicks'>
+          <td><a href='{{ klick.linkUrl }}'> {{ klick.description }} ({{ klick.url }})</a></td>
+          <td>{{ klick.createdAt }}</td>
+          <td>{{ klick.likes }}</td>
+          <td></td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

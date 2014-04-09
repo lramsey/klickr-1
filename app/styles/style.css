@@ -47,12 +47,27 @@ body{
 	background:#FFF;
 	font-size:100%;
 }
-/*---start-wrap---*/
+
+/* --------------------------------------------------------------------------------- */
+/* Nav Backgrounds
+/* --------------------------------------------------------------------------------- */
+
+.landing-bg { background: url(../images/header-bg.jpg ); }
+.gallery-bg { background: url(../images/portfolio-bg.jpg); }
+
+/* --------------------------------------------------------------------------------- */
+/* Wrap
+/* --------------------------------------------------------------------------------- */
+
 .wrap{
 	width: 80%;
 	margin: 0 auto;
 }
-/*---start-header---*/
+
+/* --------------------------------------------------------------------------------- */
+/* Header
+/* --------------------------------------------------------------------------------- */
+
 .logo {
 	float: left;
 }
@@ -72,9 +87,6 @@ body{
 }
 .top-header {
 	padding: 3em 0;
-}
-.top-nav-wrap{
-	background: url(../images/header-bg.jpg);
 }
 .header{
 	background: url(../images/header-bg.jpg);
@@ -142,7 +154,8 @@ body{
 /*---start-gallery-----*/
 .gallery-wrap {
 	background: url(../images/portfolio-bg.jpg) no-repeat;
-	padding: 4em 0;
+	padding: 2em 0;
+	min-height: 450px;
 }
 .recent-works {
 	background: url(../images/portfolio-bg.jpg) no-repeat;
